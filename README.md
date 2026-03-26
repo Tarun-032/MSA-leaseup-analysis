@@ -11,7 +11,7 @@ The dataset covers 249 properties with monthly data from April 2008 to September
 ## Screenshots
 
 ### Overview Dashboard
-![Overview - KPIs, yearly trend, and fastest lease-ups](Images/image1.png)
+![Overview - KPIs, yearly trend, and fastest lease-ups](Images/image.png)
 
 ![Overview - Distribution, delivery seasons, worst rent declines, cluster radar, and scatter plots](Images/image2.png)
 
