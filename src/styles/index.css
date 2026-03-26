@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface font-sans text-gray-900 antialiased;
+    min-width: 1200px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100 p-6 transition-all duration-200;
+  }
+  .card:hover {
+    @apply shadow-card-hover;
+    transform: translateY(-2px);
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium text-gray-500 cursor-pointer transition-all duration-150;
+  }
+  .nav-item:hover {
+    @apply bg-gray-50 text-gray-700;
+  }
+  .nav-item.active {
+    @apply bg-primary/5 text-primary;
+    box-shadow: inset 3px 0 0 0 #6366F1;
+  }
+
+  .tab-btn {
+    @apply relative px-4 py-2.5 text-sm font-medium text-gray-500 transition-colors duration-200;
+  }
+  .tab-btn.active {
+    @apply text-primary;
+  }
+  .tab-btn.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full;
+    animation: slideIn 200ms ease forwards;
+  }
+
+  .skeleton {
+    @apply bg-gray-200 rounded animate-pulse;
+  }
+}
+
+@keyframes slideIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 200ms ease forwards;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.kpi-animate {
+  animation: countUp 400ms ease forwards;
+}
+
+.recharts-cartesian-grid-horizontal line {
+  stroke: #F3F4F6 !important;
+}
+.recharts-cartesian-grid-vertical line {
+  display: none;
+}
