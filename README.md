@@ -40,7 +40,7 @@ The dataset covers 249 properties with monthly data from April 2008 to September
 
 ## Live Demo
 
-> _Add your deployed URL here after hosting._
+> _https://msa-leaseup-analysis.vercel.app/_
 
 ---
 
