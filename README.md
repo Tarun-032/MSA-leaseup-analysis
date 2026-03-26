@@ -2,10 +2,24 @@
 
 A full-stack analytics project combining **Python data analysis** with an **interactive React dashboard** to explore lease-up performance across 249 multifamily properties in Austin-Round Rock TX and Akron OH. The project moves from raw Excel data through statistical analysis and clustering (Task 1) to a production-grade dashboard with AI-powered insights (Task 2).
 
+## Screenshots
+
+### Overview Dashboard
+![Overview — KPIs, yearly trend, and fastest lease-ups](Images/image1.png)
+
+![Overview — Distribution, delivery seasons, worst rent declines, cluster radar, and scatter plots](Images/image2.png)
+
+### AI Assistant
+![AI Assistant — Clean chat interface with quick prompt suggestions](Images/image3.png)
+
+### Rent Growth Analysis
+![Rent Growth — Stat cards, top 15 worst rent declines, and lease-up vs rent decline scatter](Images/image4.png)
+
 ---
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Live Demo](#live-demo)
 - [Tech Stack](#tech-stack)
 - [Task 1 — Data Analysis (Python)](#task-1--data-analysis-python)
@@ -40,7 +54,7 @@ A full-stack analytics project combining **Python data analysis** with an **inte
 
 ## Task 1 — Data Analysis (Python)
 
-**Notebook**: `Task_1_Assesment_TarunBehera.ipynb`
+**Notebook**: `MSA_Analysis.ipynb`
 
 The analysis starts from two raw Excel files (MSA1 and MSA2), each containing four sheets of monthly time-series data (rent, occupancy & concessions, asset class, property status) spanning April 2008 to September 2020.
 
@@ -157,7 +171,7 @@ The `useChartGenerator.js` file contains a registry of 10 chart configurations, 
 
 ```
 leaseup-intelligence/
-├── Task_1_Assesment_TarunBehera.ipynb   # Python data analysis notebook
+├── MSA_Analysis.ipynb                   # Python data analysis notebook
 ├── MSA1.xlsx                            # Raw dataset (Austin-Round Rock TX)
 ├── index.html                           # Vite entry point
 ├── package.json
